@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    
+
+<head>
+    <title>DNA Translator</title>
+    <link type="text/css" href="Aesthetics.css" rel="stylesheet" />
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #708090;
+    }
+
+    .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .topnav a.active {
+        background-color: #ff3f81;
+        color: white;
+    }
+</style>
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a class="active" href="BasicOutline.html">Home</a>
+        <a href="AboutUs.html">About Us</a>
+
+    </div>
+
+
+</body>
+
+<body>
+    <div id="body-content"></div>
+    <div class="title"><b>DNA Translator</b></div>
+    <div class="subtitle">
+        <h3><b>Translate your DNA into any form.<br> For amino acids, begin with the start codons ACT, ATT, or ATC.</b></h3>
+    </div>
+    <div style="text-align: center"> 
+        <input class="sequence-input" id="sequence" />
+    </div>
+
+
+    <div class="button-container">
+ 
+            <button class="to-rna" onclick="translateRNA()">To RNA</button>
+            <button class="to-dna" onclick="translateDNA()">To DNA</button>
+            <button class="to-amino" onclick="getAmino()">To Amino Acid</button>
+
+
+    </div>
+
+    <p id="example"></p>
+   
+
+    <script src="InputSequence.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
+<script>
+VANTA.NET({
+  el: "#body-content",
+  mouseControls: true,
+  touchControls: true, 
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00
+})
+</script>
+
+</body>
+
+</html>
